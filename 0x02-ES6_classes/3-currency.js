@@ -17,11 +17,11 @@ export default class Currency {
 		return this._name;
 	}
 
-	set name(n) {
-		this._name = n;
+	set name(nm) {
+		this._name = nm;
 	}
 
 	displayFullCurrency() {
-		return `$this._name} (${this._code})`;
+		return `{$this._name} (${this._code})`;
 	}
 }
