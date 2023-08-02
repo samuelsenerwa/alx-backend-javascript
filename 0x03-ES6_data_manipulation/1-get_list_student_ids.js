@@ -1,4 +1,4 @@
-t getListStudentIds = (myArray) => {
+const getListStudentIds = (myArray) => {
   if (!Array.isArray(myArray)) {
     return [];
   }
