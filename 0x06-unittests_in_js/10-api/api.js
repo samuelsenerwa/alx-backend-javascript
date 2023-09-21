@@ -1,6 +1,4 @@
 const express = require("express");
-const { response } = require("../8-api/api");
-const { request } = require("chai");
 
 const app = express();
 const port = 7865;
@@ -12,7 +10,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/cart/:id([0-9]+)", (request, response) => {
-  response.send(`Payment methods for the cart ${request.params.id}`);
+  response.send(`Payment methods for cart ${request.params.id}`);
 });
 
 app.get("/available_payments", (request, response) => {
@@ -27,7 +25,7 @@ app.get("/available_payments", (request, response) => {
 });
 
 app.post("/login", (request, response) => {
-  const userName = response.body.userName;
+  const userName = request.body.userName;
   if (userName) {
     response.send(`Welcome ${userName}`);
   } else {
